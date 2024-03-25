@@ -7,7 +7,7 @@ public class QuadradoTest {
     @Test
     public void calcularArea() {
         Quadrado quadrado = new Quadrado(9);
-        double area = 80;
+        double area = 80; // o correto seria 81
         assertEquals("A area esperada é de 81cm²", area, quadrado.calcularArea() , 0.1);
     }
 
