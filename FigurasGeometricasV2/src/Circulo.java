@@ -5,8 +5,10 @@ public class Circulo extends CalculosGeometricos {
     public final double PI = 3.1415;
 
     public Circulo(double raio){
+        if (raio <= 0) {
+            throw new IllegalArgumentException("Raio negativo ou menor que zero não existe.");
+        }
         this.raio = raio;
-
     }
 
     public Circulo(){

@@ -17,4 +17,11 @@ public class QuadradoTest {
         double perimetro = 16;
         assertEquals("O perimetro esperado é de 16cms", perimetro, quadrado.calcularPerimetro(), 0.1);
     }
+
+    @Test
+    public void testLadoNegativo() {
+        assertThrows(IllegalArgumentException.class, () -> {
+            new Quadrado(-5);
+        });
+    }
 }

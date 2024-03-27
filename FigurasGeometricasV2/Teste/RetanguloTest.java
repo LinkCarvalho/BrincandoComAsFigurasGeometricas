@@ -17,4 +17,12 @@ public class RetanguloTest {
         double perimetroEsperado = 30.0;  // 2 * (base + altura)
         assertEquals("O perímetro do retângulo deve ser 30.0", perimetroEsperado, retangulo.calcularPerimetro(), 0.01);
     }
+
+    @Test
+    public void testBaseAlturaNegativa(){
+        assertThrows(IllegalArgumentException.class, () -> {
+            new Retangulo(-5,-6);
+        });
+    }
+
 }

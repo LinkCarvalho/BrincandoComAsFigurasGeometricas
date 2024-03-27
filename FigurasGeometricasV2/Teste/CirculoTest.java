@@ -18,4 +18,11 @@ public class CirculoTest {
         assertEquals("O perímetro do círculo deve ser 31.415", perimetroEsperado, circulo.calcularPerimetro(), 0.01);
     }
 
+    @Test
+    public void testRaioNegativo() {
+        assertThrows(IllegalArgumentException.class, () -> {
+            new Circulo(-10);
+        });
+    }
+
 }

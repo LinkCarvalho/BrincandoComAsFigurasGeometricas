@@ -4,6 +4,9 @@ public class Retangulo extends CalculosGeometricos {
     private double base;
 
     public Retangulo(double base, double altura) {
+        if(altura <=0 || base <= 0){
+            throw new IllegalArgumentException("Entrada inválida, todas as medidas devem ser maiores que zero!");
+        }
         this.base = base;
         this.altura = altura;
     }

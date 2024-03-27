@@ -2,6 +2,9 @@ public class Quadrado extends CalculosGeometricos {
     private double lado;
 
     public Quadrado(double lado){
+        if(lado <= 0 ){
+            throw new IllegalArgumentException("Entrada inválida. Medida deve ser maior que zero!");
+        }
         this.lado = lado;
     }
 
